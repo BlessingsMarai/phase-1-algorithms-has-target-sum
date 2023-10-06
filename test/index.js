@@ -24,4 +24,17 @@ describe("hasTargetSum", () => {
   it("returns false when the array is [4] and the target is 4", () => {
     expect(hasTargetSum([4], 5)).to.be.false;
   });
+  
+  // Additional test cases
+  it("returns false when the array is [] and the target is 5", () => {
+    expect(hasTargetSum([], 5)).to.be.false;
+  });
+
+  it("returns true when the array is [1, 1, 1, 1] and the target is 2", () => {
+    expect(hasTargetSum([1, 1, 1, 1], 2)).to.be.true;
+  });
+
+  it("returns false when the array is [1, 2, 3, 4] and the target is 10", () => {
+    expect(hasTargetSum([1, 2, 3, 4], 10)).to.be.false;
+  });
 });
